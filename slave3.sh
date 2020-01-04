@@ -6,7 +6,7 @@ sudo sh -c  "echo 'slave3.rupeshorg.net' > /etc/hostname"
 sudo sed -i --follow-symlinks 's/^SELINUX=.*/SELINUX=disabled/g' /etc/sysconfig/selinux && cat /etc/sysconfig/selinux
 sudo sh -c "echo 'NETWORKING_IPV6=no' >> /etc/sysconfig/network"
 sudo sh -c "echo 'HOSTNAME=slave3.rupeshorg.net' >> /etc/sysconfig/network"
-sudo sh -c "echo 'vm.swappiness = 0' >> /etc/sysctl.conf"
+sudo sh -c "echo 'vm.swappiness = 1' >> /etc/sysctl.conf"
 sudo chmod +x /etc/rc.d/rc.local
 sudo sh -c "echo 'echo never > /sys/kernel/mm/transparent_hugepage/defrag' >> /etc/rc.local"
 sudo sh -c "echo 'echo never > /sys/kernel/mm/transparent_hugepage/enabled' >> /etc/rc.local"
